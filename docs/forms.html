@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Forms</title>
+</head>
+
+<body>
+    <div>Forms</div>
+    <form action="links.html">
+        <div>
+            <form action="index.html">
+                <div>
+                    Check First : <input type="checkbox" name="my check first" checked>
+                    Check Second : <input type="checkbox" name="my check second">
+                    <label for="idcheckthird">Lable Check third</label>
+                    <input type="checkbox" name="my check third" id="idcheckthird">
+                </div>
+                <div>
+                    Hidden First<input type="hidden" name="my hidden first" value="2">
+                </div>
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+            <hr><!--구분자. 원래 쓰면 안됨-->
+            <form action="links.html">
+                <div>
+                    <form action="index.html">
+                        <div>
+                            E-mail : <input type="email" name="my email" value="otter@yojulab.com">
+                        </div>
+                        <div>
+                            Password : <input type="password" name="my password">
+                        </div>
+                        <div>
+                            Date : <input type="date" name="my date" value="2023-05-16">
+                        </div>
+                        <div>
+                            File : <input type="file" name="my file">
+                        </div>
+                        <div>
+                            <input type="submit">
+                        </div>
+                    </form>
+                    <div>
+                        <form action="main.html">
+                            검색 : <input type="text" name="search">
+                            <input type="submit">
+                        </form>
+                    </div>
+                    <hr><!--구분자. 원래 쓰면 안됨-->
+                    <div>
+                        <form action="index.html">
+                            <div>
+                                First Name : <input type="text" name="first">
+                            </div>
+                            <div>
+                                Second Name : <input type="text" name="second">
+                            </div>
+                            <div>
+                                <input type="submit">
+                            </div>
+                            <!--submit을 누르면 화면주소 마지막에 ?가 생김-->
+                            <!--http://127.0.0.1:5500/docs/login?first=Jiwon&second=Kim 이 값이 본사로 감-->
+                            <!--원격 컴퓨터가 변수값을 인지. 이는 업무와 데이터가 순서적으로 놓여짐을 볼 수 있음-->
+                            <!--업무만 보낼땐 ?가 안생김. data를 보낼땐 ?가 생김. ?뒤에 변수와 값이나타남. 
+                &를 중간으로 '변수와 값'반복으로 주소로 나타냄-->
+                            <!--http://127.0.0.1:5500/docs/logout?ID=yojulab&PW=1234 업무가없어서 cannot GET~뜸-->
+                            <!--http://127.0.0.1:5500/docs/index.html?first=Jiwon&second=Kim 실습, 프로젝트 시 
+                정상적으로 작동했을 때 'index.html'을 이용함-->
+                        </form>
+                    </div>
+                    <hr>
+                    <input type="submit">
+            </form>
+            <!--영어입력과 한글입력의 차이-->
+            <!--(영어입력) http://127.0.0.1:5500/docs/index.html?first=Jiwon&second=Kim-->
+            <!--(한글입력) http://127.0.0.1:5500/docs/index.html?first=%EC%A7%80%EC%9B%90&second=%EA%B9%80-->
+            <!--data를 명확하게 넣었으나 주로 영어가 아닌 아시아권에서 이렇게 표현됨-->
+            <form action="index.html">
+                <div>
+                    <!--5/16(화) 연습. 일종의 설문-->
+                    <div>
+                        <input type="radio" name="fruits" value="apple" id=""> 사과
+                        <input type="radio" name="fruits" value="banana" id=""> 바나나
+                        <input type="radio" name="fruits" checked value="strawberry" id=""> 딸기
+                    </div>
+                    <label for="cars">Choose a car:</label>
+                    <select name="cars" id="cars">
+                        <option value="hyundai">Hyundai</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab" selected>Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="cars">Choose a car(multiple):</label>
+
+                    <select name="cars" id="cars" multiple>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab" selected>Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                    <div>
+                        First Name : <input type="text" name="first">
+                    </div>
+                    <div>
+                        <div>Contents : </div>
+                        <textarea name="mycontents" id="" cols="30" rows="10">입력하는 곳입니다.</textarea>
+                        <!--화면에 보여지는 픽셀 수-->
+                    </div>
+                    <input type="submit">
+                    <button type="submit">Click Me!</button>
+                    <button type="reset">원래대로 돌리기</button>
+            </form>
+            <hr>
+            <div>
+                <form action="index.html">
+                    <div>
+                        <label for="cars">Choose a car:</label>
+
+                        <select name="cars" id="cars">
+                            <option value="" selected>-----</option>
+                            <option value="hyundai">Hyundai</option>
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="mercedes">Mercedes</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Click Me!</button>
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <div>
+                First Name : <input type="text" name="first">
+            </div>
+            <div>
+                <div>Contents : </div>
+                <textarea name="mycontents" id="" cols="30" rows="10">입력하는 곳입니다.</textarea>
+                <!--화면에 보여지는 픽셀 수-->
+            </div>
+
+</body>
+
+</html>

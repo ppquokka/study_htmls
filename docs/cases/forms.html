@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froms</title>
+</head>
+<body>
+    <h3>Billding address</h3>
+    <div>
+        <form action="index.html">
+            First name <input type="text" name="first name">
+            <div>
+                Valid first name is required.
+            </div>
+            Last name <input type="text" name="last name">
+            <div>
+                Valid last name is required.
+            </div>
+            <div>Username</div>
+            <div>@</div>
+            <input type="text" name="username" placeholder="Username">
+            <div>Your username is required.</div>
+
+            Email(Optional) <input type="email" name="email(optional)" placeholder="you@example.com">
+            <div>Please enter a valid email address for shipping updates.</div>
+            Adress <input type="text" name="adress" placeholder="1234 Main St">
+            <div></div>
+            Address 2 (Optional) <input type="text" name="address2(oprtional)" placeholder="Apartmentorsuite">
+            <div>
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value=""selected>Choose...</option>
+                    <option value="korea">Korea</option>
+                    <option value="china">China</option>
+                    <option value="japan">Japan</option>
+                    <option value="canada">Canada</option>
+                </select>
+            </div>
+            <div></div>
+            <div>
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value=""selected>Choose...</option>
+                    <option value="seoul">Seoul</option>
+                    <option value="busan">Busan</option>
+                    <option value="jeju">Jeju</option>
+                    <option value="gwangju">Gwangju</option>
+                </select>
+            </div>
+            <div></div>
+            Zip <input type="text" name="zip">
+            <div>Zip code required.</div>
+            <hr>
+            <div>
+            <input type="checkbox" name="s.a."> Shipping address is the same as my billing address
+            </div>
+            <div>
+            <input type="checkbox" name="s.i."> Save this information for next time
+            </div>
+            <hr>
+            <div></div>
+            <h3>Payment</h3>
+            <div>
+            <input type="radio" name="credit card"> Credit card
+            <input type="radio" name="debit card"> Debit card
+            <input type="radio" name="paypal"> Paypal
+            </div>
+            Name on card <input type="text" name="name on card"> Full name as displayed on card
+            <div></div>
+            Credit card number <input type="text" name="credit card number">
+            <div></div>
+            Expiration <input type="text" name="expiration">
+            <div></div>
+            CVV <input type="text" name="cvv">
+            <div></div>
+            <hr>
+            <button type="submit">Continue to checkout</button>
+        </form>
+    </div>
+</body>
+</html>
